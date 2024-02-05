@@ -6,7 +6,7 @@ from synthetic_data_generator_ui import SyntheticDataGeneratorUI
 def main():
     try:
         root = tk.Tk()
-        app = SyntheticDataGeneratorUI(root)
+        app = SyntheticDataGeneratorUI(root)  # 'app' variable not used here
         root.mainloop()
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred: {str(e)}")
