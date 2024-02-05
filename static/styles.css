@@ -1,0 +1,63 @@
+/* styles.css */
+
+/* Overall layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the contents horizontally */
+}
+
+
+/* Typography */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Update the color */
+}
+
+label {
+    font-size: 16px;
+    color: #555; /* Update the color */
+}
+
+/* Button */
+#generateButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#generateButton:hover {
+    background-color: #0056b3;
+}
+
+/* Form elements */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+

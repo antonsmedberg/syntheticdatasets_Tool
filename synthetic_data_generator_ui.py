@@ -2,7 +2,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox, Label
 import threading
-from main import main_logic  # Import the main logic function
+from data_generation_script import main_logic  # Import the main logic function
 
 
 class SyntheticDataGeneratorUI:
