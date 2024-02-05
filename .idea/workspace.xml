@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66f7214-5573-47cc-8da2-dbb9277c9f8a" name="Changes" comment="SyntheticDataGenerator" />
+    <list default="true" id="c66f7214-5573-47cc-8da2-dbb9277c9f8a" name="Changes" comment="SyntheticDataGenerator, updated files">
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SyntheticDataGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/synthetic_data_generator.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +55,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Anton\PycharmProjects\syntheticdatasets_Tool" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Anton\PycharmProjects\syntheticdatasets_Tool" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -66,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707135752414</updated>
-      <workItem from="1707135755787" duration="712000" />
+      <workItem from="1707135755787" duration="2235000" />
     </task>
     <task id="LOCAL−00001" summary="SyntheticDataGenerator">
       <option name="closed" value="true" />
@@ -75,7 +83,14 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1707136283186</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="SyntheticDataGenerator, updated files">
+      <option name="closed" value="true" />
+      <created>1707136703183</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1707136703183</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="SyntheticDataGenerator" />
-    <option name="LAST_COMMIT_MESSAGE" value="SyntheticDataGenerator" />
+    <MESSAGE value="SyntheticDataGenerator, updated files" />
+    <option name="LAST_COMMIT_MESSAGE" value="SyntheticDataGenerator, updated files" />
   </component>
 </project>
