@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c66f7214-5573-47cc-8da2-dbb9277c9f8a" name="Changes" comment="updates!">
+    <list default="true" id="c66f7214-5573-47cc-8da2-dbb9277c9f8a" name="Changes" comment="updates for project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
@@ -119,7 +119,7 @@
       <workItem from="1707154011738" duration="230000" />
       <workItem from="1707154353583" duration="83000" />
       <workItem from="1707154545499" duration="2172000" />
-      <workItem from="1707305578563" duration="7374000" />
+      <workItem from="1707305578563" duration="7859000" />
     </task>
     <task id="LOCAL−00001" summary="SyntheticDataGenerator">
       <option name="closed" value="true" />
@@ -184,7 +184,14 @@
       <option name="presentableId" value="LOCAL−00009" />
       <updated>1707313091294</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL−00010" summary="updates for project">
+      <option name="closed" value="true" />
+      <created>1707313723882</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1707313723882</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +203,8 @@
     <MESSAGE value="SyntheticDataGenerator, updated files" />
     <MESSAGE value="interfaceUi, for script update!" />
     <MESSAGE value="updates!" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates!" />
+    <MESSAGE value="updates for project" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates for project" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/syntheticdatasets_Tool$run.coverage" NAME="run Coverage Results" MODIFIED="1707149349736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

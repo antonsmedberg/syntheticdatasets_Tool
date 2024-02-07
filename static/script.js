@@ -3,13 +3,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const numSamplesInput = document.getElementById("numSamples");
     const numFeaturesInput = document.getElementById("numFeatures");
     const resultDiv = document.getElementById("result");
+    const taskSelect = document.getElementById("task");
+
+    // Set focus on the first input field
+    numSamplesInput.focus();
 
     form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
         const numSamples = parseInt(numSamplesInput.value);
         const numFeatures = parseInt(numFeaturesInput.value);
-        const task = document.getElementById("task").value;
+        const task = taskSelect.value;
 
         if (!validateInputs(numSamples, numFeatures)) {
             displayError("Please enter valid values for number of samples and features.");
@@ -24,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (response.success) {
                 displaySuccess(response.message);
                 downloadDataset(response.data);
+                showConfirmation("Dataset generated successfully and downloaded.");
             } else {
                 displayError("Error: " + response.error);
             }
@@ -36,24 +41,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     numSamplesInput.addEventListener("input", function () {
-        if (!validateInputValue(numSamplesInput)) {
-            numSamplesInput.classList.add("error");
-            document.getElementById("numSamplesError").style.display = "block";
-        } else {
-            numSamplesInput.classList.remove("error");
-            document.getElementById("numSamplesError").style.display = "none";
-        }
+        handleInputValidation(numSamplesInput);
     });
 
     numFeaturesInput.addEventListener("input", function () {
-        if (!validateInputValue(numFeaturesInput)) {
-            numFeaturesInput.classList.add("error");
-            document.getElementById("numFeaturesError").style.display = "block";
-        } else {
-            numFeaturesInput.classList.remove("error");
-            document.getElementById("numFeaturesError").style.display = "none";
-        }
+        handleInputValidation(numFeaturesInput);
     });
+
+    function handleInputValidation(input) {
+        if (!validateInputValue(input)) {
+            input.classList.add("error");
+            document.getElementById(input.id + "Error").style.display = "block";
+        } else {
+            input.classList.remove("error");
+            document.getElementById(input.id + "Error").style.display = "none";
+        }
+    }
 
     function validateInputs(numSamples, numFeatures) {
         return numSamples > 0 && numFeatures > 0 && numSamples <= 10000 && numFeatures <= 1000;
@@ -109,7 +112,13 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.appendChild(link);
         link.click();
     }
+
+    function showConfirmation(message) {
+        alert(message); // You can replace this with a custom confirmation message element
+    }
 });
+
+
 
 
 

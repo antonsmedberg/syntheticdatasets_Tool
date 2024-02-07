@@ -89,6 +89,52 @@ button:hover {
     animation: spin 1s infinite linear;
 }
 
+/* Tooltip */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 999;
+}
+
+/* Error message */
+.error-message {
+    display: none;
+    color: red;
+}
+
+.error-message.active {
+    display: block;
+}
+
+/* Success message */
+.success-message {
+    color: green;
+}
+
+/* Confirmation message */
+.confirmation-message {
+    display: none;
+    color: blue;
+}
+
+.confirmation-message.active {
+    display: block;
+}
+
+
 
 
 
