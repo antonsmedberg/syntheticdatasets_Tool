@@ -2,20 +2,75 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
-    const generateButton = document.getElementById("generateButton");
+    const resultDiv = document.getElementById("result");
 
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        // Perform form validation (e.g., check if input fields are not empty)
         const numSamples = document.getElementById("numSamples").value;
         const numFeatures = document.getElementById("numFeatures").value;
         const task = document.getElementById("task").value;
 
-        // You can add more validation logic here
+        if (!validateInputs(numSamples, numFeatures)) {
+            displayResult("Please enter valid values for number of samples and features.");
+            return;
+        }
 
-        // If validation passes, submit data to the server
-        // Update the DOM with results or display error messages
+        try {
+            displayLoading(true);
+
+            const response = await generateData(numSamples, numFeatures, task);
+
+            if (response.success) {
+                displayResult(response.message);
+            } else {
+                displayResult("Error: " + response.error);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            displayResult("An error occurred while processing the request. Please try again later.");
+        } finally {
+            displayLoading(false);
+        }
     });
+
+    function validateInputs(numSamples, numFeatures) {
+        return numSamples > 0 && numFeatures > 0 && numSamples <= 10000 && numFeatures <= 1000;
+    }
+
+    async function generateData(samples, features, task) {
+        const response = await fetch('/generate_data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                samples,
+                features,
+                task
+            }),
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        return await response.json();
+    }
+
+    function displayResult(message) {
+        resultDiv.innerText = message;
+    }
+
+    function displayLoading(isLoading) {
+        const generateButton = document.getElementById("generateButton");
+        generateButton.disabled = isLoading;
+        generateButton.innerText = isLoading ? "Generating..." : "Generate Dataset";
+    }
 });
+
+
+
+
+
 

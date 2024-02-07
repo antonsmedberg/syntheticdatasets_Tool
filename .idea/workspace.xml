@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c66f7214-5573-47cc-8da2-dbb9277c9f8a" name="Changes" comment="interfaceUi, for script update!">
-      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app.spec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cli_interface.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_storage_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/syntheticdatasets_Tool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/syntheticdatasets_Tool.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_generation_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.spec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_generation_script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/synthetic_data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/synthetic_data_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/synthetic_data_generator_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/synthetic_data_generator_ui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +128,8 @@
       <workItem from="1707150096133" duration="3868000" />
       <workItem from="1707154011738" duration="230000" />
       <workItem from="1707154353583" duration="83000" />
-      <workItem from="1707154545499" duration="30000" />
+      <workItem from="1707154545499" duration="2172000" />
+      <workItem from="1707305578563" duration="6467000" />
     </task>
     <task id="LOCAL−00001" summary="SyntheticDataGenerator">
       <option name="closed" value="true" />
@@ -170,7 +173,14 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1707144369778</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="interfaceUi, for script update!">
+      <option name="closed" value="true" />
+      <created>1707154586377</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1707154586377</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
