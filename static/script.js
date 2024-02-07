@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const infoHelpButton = document.getElementById("infoHelpButton");
     const infoHelpModal = document.getElementById("infoHelpModal");
     const closeButton = document.getElementsByClassName("close")[0];
+    const howToUseSection = document.getElementById("howToUseSection"); // Add this line
 
     // Set focus on the first input field
     numSamplesInput.focus();
@@ -57,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     infoHelpButton.addEventListener("click", function () {
         infoHelpModal.style.display = "block";
+        howToUseSection.style.display = "block"; // Toggle the display of the "How to Use" section
     });
 
     closeButton.addEventListener("click", function () {
@@ -64,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     window.addEventListener("click", function (event) {
-        if (event.target == infoHelpModal) {
+        if (event.target === infoHelpModal) {
             infoHelpModal.style.display = "none";
         }
     });
