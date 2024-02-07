@@ -10,16 +10,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>Generate Synthetic Datasets</h1>
+        <h1>Synthetic Data Generator</h1>
+        <p>Generate synthetic datasets for machine learning tasks.</p>
 
         <div class="input-container">
             <label for="numSamples">Number of Samples:</label>
-            <input type="number" id="numSamples" placeholder="Enter the number of samples" title="Enter the number of samples you want to generate" min="1" required>
+            <input type="number" id="numSamples" placeholder="Enter the number of samples (e.g., 100)" title="Enter the number of samples you want to generate" min="1" required>
+            <small>Positive integer greater than zero</small>
         </div>
 
         <div class="input-container">
             <label for="numFeatures">Number of Features:</label>
-            <input type="number" id="numFeatures" placeholder="Enter the number of features" title="Enter the number of features for each sample" min="1" required>
+            <input type="number" id="numFeatures" placeholder="Enter the number of features (e.g., 10)" title="Enter the number of features for each sample" min="1" required>
+            <small>Positive integer greater than zero</small>
         </div>
 
         <div class="input-container">
@@ -29,16 +32,17 @@
                 <option value="regression">Regression</option>
                 <option value="clustering">Clustering</option>
             </select>
+            <small>Choose the machine learning task for the dataset</small>
         </div>
 
         <button id="generateButton" title="Click to generate the dataset">Generate Dataset</button>
-
         <div id="loadingIndicator" class="loading-indicator"></div>
 
         <div id="result" class="result-message"></div>
     </div>
 </body>
 </html>
+
 
 
 
