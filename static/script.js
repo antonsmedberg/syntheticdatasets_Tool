@@ -58,16 +58,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     infoHelpButton.addEventListener("click", function () {
         infoHelpModal.style.display = "block";
-        howToUseSection.style.display = "block"; // Toggle the display of the "How to Use" section
+        howToUseSection.style.display = "block"; // Display the "How to Use" section when the modal is opened
     });
 
     closeButton.addEventListener("click", function () {
         infoHelpModal.style.display = "none";
+        howToUseSection.style.display = "none"; // Hide the "How to Use" section when the modal is closed
     });
 
     window.addEventListener("click", function (event) {
         if (event.target === infoHelpModal) {
             infoHelpModal.style.display = "none";
+            howToUseSection.style.display = "none"; // Hide the "How to Use" section when the modal is closed by clicking outside
         }
     });
 
@@ -168,6 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 3000); // Hide after 3 seconds
     }
 });
+
 
 
 

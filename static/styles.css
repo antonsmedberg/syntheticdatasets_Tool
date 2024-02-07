@@ -13,11 +13,12 @@ body {
 
 .container {
     max-width: 600px;
-    margin: 50px auto; /* Center the container vertically */
+    margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    border-radius: 8px; /* Add border radius for a softer look */
 }
 
 /* Typography */
@@ -38,18 +39,19 @@ label {
 /* Form elements */
 input[type="number"],
 select {
-    width: calc(100% - 22px); /* Adjust width for border */
-    padding: 12px; /* Increase padding for better touch/click target */
+    width: calc(100% - 22px);
+    padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     transition: border-color 0.3s ease;
+    outline: none; /* Remove default outline */
 }
 
 input[type="number"]:focus,
 select:focus {
-    border-color: #007bff; /* Change border color on focus */
+    border-color: #007bff;
 }
 
 button {
@@ -61,7 +63,7 @@ button {
     transition: background-color 0.3s ease;
     font-size: 16px;
     border-radius: 4px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
@@ -121,12 +123,12 @@ button:hover {
     font-size: 14px;
     white-space: nowrap;
     z-index: 999;
-    opacity: 0; /* Hide by default */
-    transition: opacity 0.3s ease; /* Add transition for smoother appearance */
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 [data-tooltip]:hover::after {
-    opacity: 1; /* Show on hover */
+    opacity: 1;
 }
 
 /* Error message */
@@ -141,7 +143,7 @@ button:hover {
 
 /* Modal styles */
 #infoHelpModal {
-    display: none; /* Hide the modal by default */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -158,6 +160,7 @@ button:hover {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    border-radius: 8px; /* Add border radius for a softer look */
 }
 
 .close {
@@ -173,8 +176,6 @@ button:hover {
     text-decoration: none;
     cursor: pointer;
 }
-
-
 
 
 

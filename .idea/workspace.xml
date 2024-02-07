@@ -7,6 +7,7 @@
     <list default="true" id="c66f7214-5573-47cc-8da2-dbb9277c9f8a" name="Changes" comment="updates for project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +119,7 @@
       <workItem from="1707154011738" duration="230000" />
       <workItem from="1707154353583" duration="83000" />
       <workItem from="1707154545499" duration="2172000" />
-      <workItem from="1707305578563" duration="10240000" />
+      <workItem from="1707305578563" duration="10539000" />
     </task>
     <task id="LOCAL−00001" summary="SyntheticDataGenerator">
       <option name="closed" value="true" />
@@ -239,7 +240,14 @@
       <option name="presentableId" value="LOCAL−00017" />
       <updated>1707316276552</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL−00018" summary="updates for project">
+      <option name="closed" value="true" />
+      <created>1707316595984</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1707316595984</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
