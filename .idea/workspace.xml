@@ -119,7 +119,7 @@
       <workItem from="1707154011738" duration="230000" />
       <workItem from="1707154353583" duration="83000" />
       <workItem from="1707154545499" duration="2172000" />
-      <workItem from="1707305578563" duration="8545000" />
+      <workItem from="1707305578563" duration="9351000" />
     </task>
     <task id="LOCAL−00001" summary="SyntheticDataGenerator">
       <option name="closed" value="true" />
@@ -198,7 +198,14 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1707314201644</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="updates for project">
+      <option name="closed" value="true" />
+      <created>1707314890390</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1707314890390</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

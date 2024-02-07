@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultDiv = document.getElementById("result");
     const taskSelect = document.getElementById("task");
     const taskError = document.getElementById("taskError");
+    const infoHelpButton = document.getElementById("infoHelpButton");
+    const infoHelpModal = document.getElementById("infoHelpModal");
+    const closeButton = document.getElementsByClassName("close")[0];
 
     // Set focus on the first input field
     numSamplesInput.focus();
@@ -50,6 +53,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     taskSelect.addEventListener("change", function () {
         taskError.classList.remove("active");
+    });
+
+    infoHelpButton.addEventListener("click", function () {
+        infoHelpModal.style.display = "block";
+    });
+
+    closeButton.addEventListener("click", function () {
+        infoHelpModal.style.display = "none";
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target == infoHelpModal) {
+            infoHelpModal.style.display = "none";
+        }
     });
 
     function handleInputValidation(input) {
@@ -149,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 3000); // Hide after 3 seconds
     }
 });
+
 
 
 

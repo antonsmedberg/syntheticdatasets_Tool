@@ -39,6 +39,8 @@
                     <li>You can use this dataset for training machine learning models or experiments.</li>
                 </ul>
             </ol>
+            <!-- Info button for help -->
+            <button id="infoHelpButton" title="Click for help">Info</button>
         </section>
 
         <!-- Form -->
@@ -71,8 +73,43 @@
             <div id="confirmation" class="confirmation-message"></div>
         </form>
     </div>
+
+    <!-- Modal for help information -->
+    <div id="infoHelpModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How to Use</h2>
+            <p>To generate synthetic datasets for machine learning tasks, follow these steps:</p>
+            <ol>
+                <li>Specify the Number of Samples and Features:
+                    <ul>
+                        <li>Enter the desired number of samples (data points) and features (attributes) in the respective input fields.</li>
+                        <li>Both values must be positive integers.</li>
+                        <li>The number of samples should represent the size of the dataset (1 to 10,000).</li>
+                        <li>The number of features indicates the dimensionality of each data point (1 to 1,000).</li>
+                    </ul>
+                </li>
+                <li>Choose the Machine Learning Task:
+                    <ul>
+                        <li>Select the type of machine learning task from the dropdown menu:</li>
+                        <li><strong>Classification:</strong> Predict categories or classes.</li>
+                        <li><strong>Regression:</strong> Predict continuous values.</li>
+                        <li><strong>Clustering:</strong> Group similar data points.</li>
+                    </ul>
+                </li>
+                <li>Generate and Save the Dataset:
+                    <ul>
+                        <li>Click the <strong>"Generate & Save Dataset"</strong> button to create the synthetic dataset based on your specifications.</li>
+                        <li>The dataset will be saved as a CSV file named <strong>"generated_dataset.csv"</strong>.</li>
+                        <li>You can use this dataset for training machine learning models or experiments.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
 </body>
 </html>
+
 
 
 
