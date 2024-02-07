@@ -1,18 +1,18 @@
-// script.static
-
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form");
+    const form = document.getElementById("dataForm");
+    const numSamplesInput = document.getElementById("numSamples");
+    const numFeaturesInput = document.getElementById("numFeatures");
     const resultDiv = document.getElementById("result");
 
     form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        const numSamples = document.getElementById("numSamples").value;
-        const numFeatures = document.getElementById("numFeatures").value;
+        const numSamples = parseInt(numSamplesInput.value);
+        const numFeatures = parseInt(numFeaturesInput.value);
         const task = document.getElementById("task").value;
 
         if (!validateInputs(numSamples, numFeatures)) {
-            displayResult("Please enter valid values for number of samples and features.");
+            displayError("Please enter valid values for number of samples and features.");
             return;
         }
 
@@ -22,20 +22,46 @@ document.addEventListener("DOMContentLoaded", function () {
             const response = await generateData(numSamples, numFeatures, task);
 
             if (response.success) {
-                displayResult(response.message);
+                displaySuccess(response.message);
+                downloadDataset(response.data);
             } else {
-                displayResult("Error: " + response.error);
+                displayError("Error: " + response.error);
             }
         } catch (error) {
             console.error('Error:', error);
-            displayResult("An error occurred while processing the request. Please try again later.");
+            displayError("An error occurred while processing the request. Please try again later.");
         } finally {
             displayLoading(false);
         }
     });
 
+    numSamplesInput.addEventListener("input", function () {
+        if (!validateInputValue(numSamplesInput)) {
+            numSamplesInput.classList.add("error");
+            document.getElementById("numSamplesError").style.display = "block";
+        } else {
+            numSamplesInput.classList.remove("error");
+            document.getElementById("numSamplesError").style.display = "none";
+        }
+    });
+
+    numFeaturesInput.addEventListener("input", function () {
+        if (!validateInputValue(numFeaturesInput)) {
+            numFeaturesInput.classList.add("error");
+            document.getElementById("numFeaturesError").style.display = "block";
+        } else {
+            numFeaturesInput.classList.remove("error");
+            document.getElementById("numFeaturesError").style.display = "none";
+        }
+    });
+
     function validateInputs(numSamples, numFeatures) {
         return numSamples > 0 && numFeatures > 0 && numSamples <= 10000 && numFeatures <= 1000;
+    }
+
+    function validateInputValue(input) {
+        const value = parseInt(input.value);
+        return !isNaN(value) && value > 0;
     }
 
     async function generateData(samples, features, task) {
@@ -58,8 +84,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return await response.json();
     }
 
-    function displayResult(message) {
+    function displaySuccess(message) {
         resultDiv.innerText = message;
+        resultDiv.classList.remove('error');
+    }
+
+    function displayError(message) {
+        resultDiv.innerText = message;
+        resultDiv.classList.add('error');
     }
 
     function displayLoading(isLoading) {
@@ -67,7 +99,21 @@ document.addEventListener("DOMContentLoaded", function () {
         generateButton.disabled = isLoading;
         generateButton.innerText = isLoading ? "Generating..." : "Generate Dataset";
     }
+
+    function downloadDataset(data) {
+        const csvContent = "data:text/csv;charset=utf-8," + data;
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "generated_dataset.csv");
+        document.body.appendChild(link);
+        link.click();
+    }
 });
+
+
+
+
 
 
 

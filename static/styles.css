@@ -13,16 +13,16 @@ body {
 
 .container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 50px auto; /* Center the container vertically */
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center the contents horizontally */
+    text-align: center;
 }
 
 /* Typography */
 h1 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
@@ -32,27 +32,33 @@ label {
     display: block;
     font-size: 16px;
     color: #555;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* Form elements */
 input[type="number"],
 select {
     width: calc(100% - 22px); /* Adjust width for border */
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 12px; /* Increase padding for better touch/click target */
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: #007bff; /* Change border color on focus */
 }
 
 button {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.3s ease;
     font-size: 16px;
     border-radius: 4px;
 }
@@ -64,7 +70,7 @@ button:hover {
 /* Result message */
 .result-message {
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 18px;
     color: #333;
 }
 
@@ -83,10 +89,6 @@ button:hover {
     animation: spin 1s infinite linear;
 }
 
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
 
 
 
