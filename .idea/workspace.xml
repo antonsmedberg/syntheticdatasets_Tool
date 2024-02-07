@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c66f7214-5573-47cc-8da2-dbb9277c9f8a" name="Changes" comment="updates for project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,7 @@
       <workItem from="1707154011738" duration="230000" />
       <workItem from="1707154353583" duration="83000" />
       <workItem from="1707154545499" duration="2172000" />
-      <workItem from="1707305578563" duration="9845000" />
+      <workItem from="1707305578563" duration="9923000" />
     </task>
     <task id="LOCAL−00001" summary="SyntheticDataGenerator">
       <option name="closed" value="true" />
@@ -224,7 +223,14 @@
       <option name="presentableId" value="LOCAL−00015" />
       <updated>1707316041207</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL−00016" summary="updates for project">
+      <option name="closed" value="true" />
+      <created>1707316203991</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1707316203991</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
