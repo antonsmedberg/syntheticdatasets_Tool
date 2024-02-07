@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const numFeaturesInput = document.getElementById("numFeatures");
     const resultDiv = document.getElementById("result");
     const taskSelect = document.getElementById("task");
+    const taskError = document.getElementById("taskError");
 
     // Set focus on the first input field
     numSamplesInput.focus();
@@ -16,22 +17,21 @@ document.addEventListener("DOMContentLoaded", function () {
         const task = taskSelect.value;
 
         if (!validateInputs(numSamples, numFeatures)) {
-            displayError("Please enter valid values for number of samples and features.");
+            displayError(validateErrorMessage(numSamples, numFeatures));
             return;
+        }
+
+        if (!task) {
+            taskError.classList.add("active");
+            return;
+        } else {
+            taskError.classList.remove("active");
         }
 
         try {
             displayLoading(true);
-
             const response = await generateData(numSamples, numFeatures, task);
-
-            if (response.success) {
-                displaySuccess(response.message);
-                downloadDataset(response.data);
-                showConfirmation("Dataset generated successfully and downloaded.");
-            } else {
-                displayError("Error: " + response.error);
-            }
+            handleResponse(response);
         } catch (error) {
             console.error('Error:', error);
             displayError("An error occurred while processing the request. Please try again later.");
@@ -48,13 +48,17 @@ document.addEventListener("DOMContentLoaded", function () {
         handleInputValidation(numFeaturesInput);
     });
 
+    taskSelect.addEventListener("change", function () {
+        taskError.classList.remove("active");
+    });
+
     function handleInputValidation(input) {
         if (!validateInputValue(input)) {
             input.classList.add("error");
-            document.getElementById(input.id + "Error").style.display = "block";
+            document.getElementById(input.id + "Error").classList.add("active");
         } else {
             input.classList.remove("error");
-            document.getElementById(input.id + "Error").style.display = "none";
+            document.getElementById(input.id + "Error").classList.remove("active");
         }
     }
 
@@ -65,6 +69,19 @@ document.addEventListener("DOMContentLoaded", function () {
     function validateInputValue(input) {
         const value = parseInt(input.value);
         return !isNaN(value) && value > 0;
+    }
+
+    function validateErrorMessage(numSamples, numFeatures) {
+        if (numSamples <= 0 || numFeatures <= 0) {
+            return "Please enter a positive integer for both number of samples and features.";
+        } else {
+            if (numSamples > 10000) {
+                return "The number of samples should not exceed 10,000.";
+            }
+            if (numFeatures > 1000) {
+                return "The number of features should not exceed 1,000.";
+            }
+        }
     }
 
     async function generateData(samples, features, task) {
@@ -85,6 +102,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         return await response.json();
+    }
+
+    function handleResponse(response) {
+        if (response.success) {
+            displaySuccess(response.message);
+            downloadDataset(response.data);
+            showConfirmation("Dataset generated successfully and downloaded.");
+        } else {
+            displayError("Error: " + response.error);
+        }
     }
 
     function displaySuccess(message) {
@@ -114,9 +141,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function showConfirmation(message) {
-        alert(message); // You can replace this with a custom confirmation message element
+        const confirmationMessage = document.getElementById("confirmation");
+        confirmationMessage.innerText = message;
+        confirmationMessage.classList.add("active");
+        setTimeout(function () {
+            confirmationMessage.classList.remove("active");
+        }, 3000); // Hide after 3 seconds
     }
 });
+
+
 
 
 

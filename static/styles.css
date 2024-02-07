@@ -61,23 +61,37 @@ button {
     transition: background-color 0.3s ease;
     font-size: 16px;
     border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-/* Result message */
-.result-message {
+/* Message styles */
+.result-message,
+.error-message,
+.success-message,
+.confirmation-message {
     margin-top: 20px;
     font-size: 18px;
-    color: #333;
+}
+
+.error-message {
+    color: red;
+}
+
+.success-message {
+    color: green;
+}
+
+.confirmation-message {
+    color: blue;
 }
 
 /* Loading Indicator */
 .loading-indicator {
     display: none;
-    margin-top: 20px;
 }
 
 .loading-indicator::after {
@@ -107,33 +121,23 @@ button:hover {
     font-size: 14px;
     white-space: nowrap;
     z-index: 999;
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s ease; /* Add transition for smoother appearance */
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1; /* Show on hover */
 }
 
 /* Error message */
-.error-message {
-    display: none;
-    color: red;
-}
-
 .error-message.active {
     display: block;
 }
 
-/* Success message */
-.success-message {
-    color: green;
-}
-
 /* Confirmation message */
-.confirmation-message {
-    display: none;
-    color: blue;
-}
-
 .confirmation-message.active {
     display: block;
 }
-
 
 
 
